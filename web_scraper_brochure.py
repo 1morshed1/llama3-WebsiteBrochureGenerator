@@ -4,6 +4,7 @@ import requests
 import json
 import time
 from typing import List, Dict, Optional
+from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 from IPython.display import Markdown, display
 from openai import OpenAI
@@ -15,6 +16,14 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Initialize and constants
+load_dotenv(override=True)
+api_key = os.getenv('OPENAI_API_KEY')
+
+if api_key and api_key.startswith('sk-proj-') and len(api_key) > 10:
+    print("API key looks good so far")
+else:
+    print("There might be a problem with your API key? Please visit the troubleshooting notebook!")
+    
 MODEL = 'llama3.2'
 openai = OpenAI(base_url='http://localhost:11434/v1', api_key='ollama')
 
