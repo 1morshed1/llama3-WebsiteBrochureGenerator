@@ -26,8 +26,8 @@ An intelligent web scraper and AI-powered brochure generator that analyzes compa
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/1morshed1/website-brochure-generator.git
-cd website-brochure-generator
+git clone https://github.com/1morshed1/llama3-WebsiteBrochureGenerator.git
+cd llama3-WebsiteBrochureGenerator
 ```
 
 2. Install required packages:
